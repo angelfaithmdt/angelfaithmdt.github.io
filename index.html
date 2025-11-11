@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #693a3a;
+      background-color: #ffffff;
+    }
+
+    .navbar {
+      background-color: #fff;
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .navbar-brand {
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: #3b3b3b;
+    }
+
+    .navbar-nav .nav-link {
+      color: #3b3b3b;
+      font-weight: 500;
+      margin-left: 1rem;
+    }
+
+    .navbar-nav .nav-link:hover {
+      color: #f5a623;
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 4rem 5%;
+    }
+
+    .hero-text h1 {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+
+    .hero-text h1 span {
+      color: #cba86f;
+    }
+
+    .hero-text p {
+      margin-top: 1rem;
+      font-size: 1.1rem;
+      color: #555;
+      max-width: 500px;
+    }
+
+    .hero-buttons .btn {
+      margin-top: 1.5rem;
+      margin-right: 1rem;
+      padding: 0.75rem 1.5rem;
+      border-radius: 50px;
+      font-weight: 500;
+    }
+
+    .btn-primary {
+      background-color: #cba86f;
+      border: none;
+    }
+
+    .btn-outline-dark {
+      border: 2px solid #333;
+      color: #333;
+    }
+
+    .btn-outline-dark:hover {
+      background-color: #333;
+      color: #fff;
+    }
+
+    .profile-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 50px;
+    }
+
+    .circle-bg {
+      position: relative;
+      width: 300px;
+      height: 300px;
+      background-color: #c79a4a;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+    .profile-img {
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 220px;
+    }
+
+    .hero img {
+      width: 350px;
+      border-radius: 50%;
+      background-color: #cba86f;
+      padding: 1rem;
+    }
+
+    .services {
+      background-color: #cba86f;
+      padding: 4rem 5%;
+      text-align: center;
+    }
+
+    .services h2 span {
+      color: #f6f6f6;
+    }
+
+    .service-card {
+      background: #ffffff;
+      border: none;
+      border-radius: 15px;
+      padding: 2rem;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .service-card h5 {
+      margin-top: 1rem;
+      font-weight: 600;
+    }
+
+    #activities {
+      padding: 4rem 5%;
+      background-color: #fff;
+      text-align: center;
+    }
+
+    #activities h2 {
+      color: #693a3a;
+      margin-bottom: 2rem;
+      font-weight: 700;
+    }
+
+    .project-card {
+      background: #ffffff;
+      border: 3px solid #cba86f;
+      border-radius: 15px;
+      padding: 2rem;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .project-card a {
+      color: #ffffff;
+      font-weight: 600;
+      padding: 1rem;
+      text-decoration: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 0;
+      background: #222;
+      color: #fff;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">AD.</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#activities">Activities</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero container" id="home" style="margin-top: 100px;">
+    <div class="hero-text">
+      <p class="text-muted">Hello There!</p>
+      <h1>I’m <span>Angel</span>,<br>IT Student</h1>
+      <p>I am currently a 3rd-year college student taking up a Bachelor of Science in Information Technology. I'm an
+        aspiring designer, eager to learn and grow in the field.</p>
+      <div class="hero-buttons">
+        <a href="#activities" class="btn btn-primary">View My Activities</a>
+        <a href="#contact" class="btn btn-outline-dark">Contact Me</a>
+      </div>
+    </div>
+    <div class="profile-wrapper">
+      <div class="circle-bg">
+        <img src="id.png" alt="Profile photo" class="profile-img">
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <h2 class="mb-4">Services <span>| Soon</span></h2>
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="service-card p-4">
+            <img src="uiux-icon.png" width="60" alt="">
+            <h5>UI/UX Design</h5>
+            <p>Creating visually appealing and user-friendly interfaces that improve usability and experience.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service-card p-4">
+            <img src="app-icon.png" width="60" alt="">
+            <h5>Application Design</h5>
+            <p>Designing intuitive layouts and features for web and mobile applications using modern tools.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service-card p-4">
+            <img src="web-icon.png" width="60" alt="">
+            <h5>Website Design</h5>
+            <p>Building responsive websites optimized for performance and aesthetic quality.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="activities">
+    <div class="container">
+      <h2>My Activities</h2>
+      <div class="row g-4 justify-content-center">
+
+        <div class="col-md-5">
+          <div class="project-card">
+            <h5>iPhone 16</h5>
+            <iframe src="https://angelfaithmdt.github.io/a_project1/" width="100%" height="400px" style="border:none; border-radius:10px;"></iframe>
+            <div class="mt-3">
+              <a href="https://angelfaithmdt.github.io/a_project1/" target="_blank" class="btn btn-primary btn-sm">View Full Website</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-5">
+          <div class="project-card">
+            <h5>Netherlands</h5>
+            <iframe src="https://angelfaithmdt.github.io/a_project2/" width="100%" height="400px" style="border:none; border-radius:10px;"></iframe>
+            <div class="mt-3">
+              <a href="https://angelfaithmdt.github.io/a_project2/" target="_blank" class="btn btn-primary btn-sm">View Full Website</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 AD Portfolio. All Rights Reserved.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
